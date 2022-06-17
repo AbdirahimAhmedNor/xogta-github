@@ -18,7 +18,17 @@ def getUserInfo(username, token):
     public_repos = result['public_repos']
     total_private_repos = result['total_private_repos']
 
-    print(name, total_private_repos, public_repos)
+    print()
+    print()
+    print()
+    print(" 🤵 Magaca:".rjust(20), name)
+    print()
+    print(" 🏗  keydadka".rjust(22), 'banaanka:', public_repos) 
+    print()
+    print(" 🔒 keydadka".rjust(21)," qaaska:", total_private_repos)
+    print()
+    print()
+    print()
 
 
 getUserInfo(username, token)
