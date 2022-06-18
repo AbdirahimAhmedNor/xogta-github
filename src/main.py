@@ -1,6 +1,7 @@
 import requests
 import json
 import sys
+from longestStreak import get_longest_streak
 
 username = sys.argv[1]
 token = sys.argv[2]
@@ -22,6 +23,7 @@ def getUserInfo(username, token):
   public_repos = user_info_result['public_repos']
   total_private_repos = user_info_result['total_private_repos']
   total_contributions = number_contribution_result['totalContributions']
+  longest_streak = get_longest_streak(number_contribution_result)
 
   print()
   print()
@@ -32,10 +34,13 @@ def getUserInfo(username, token):
   print()
   print(" 🔒 keydadka".rjust(21)," qaaska:", total_private_repos)
   print()
-  print(" 🚧 Wax".rjust(16)," ku biirin:", total_contributions)
+  print(" 🚧 Tirada".rjust(20)," wax ku biirin:", total_contributions)
+  print()
+  print(" ⚾️🚴🥎 Longest".rjust(23)," streak:", longest_streak)
   print()
   print()
   print()
 
 
 getUserInfo(username, token)
+
